@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InventoryApp</string>
+
+    <string name="action_supplier">Forncedores</string>
+
+    <string name="action_settings">Configurações</string>
+
+    <string name="supplier_text_list">Fornecedores:</string>
+
+    <string name="product_text_list">Produtos:</string>
+
+    <string name="supplier_btn_edit">Editar</string>
+
+    <string name="supplier_btn_del">Excluir</string>
+
+    <string name="product_btn_sell">Vender</string>
+
+    <string name="product_btn_details">Detalhes</string>
+
+    <string name="editor_activity_title_new_supplier">Cadastrar fornecedor</string>
+
+    <string name="editor_activity_title_new_product">Cadastrar produto</string>
+
+    <string name="action_save">Salvar</string>
+
+    <string name="action_delete">Excluir</string>
+
+    <string name="category_overview">Detalhes</string>
+
+    <string name="product_label_supplier">Escolha o fornecedor:</string>
+
+    <string name="product_label_image">Escolha a imagem:</string>
+
+    <string name="product_btn_add_img">Escolher imagem</string>
+
+    <string name="supplier_label_name">Nome:</string>
+
+    <string name="supplier_label_email">Email:</string>
+
+    <string name="supplier_label_phone">Telefone:</string>
+
+    <string name="product_label_name">Nome:</string>
+
+    <string name="product_label_amount">Quantidade:</string>
+
+    <string name="product_label_value">Valor:</string>
+
+    <string name="product_label_desc">Descrição:</string>
+
+    <string name="product_btn_add">Cadastrar</string>
+
+    <string name="hint_product_name">Name</string>
+
+    <string name="supplier_unknown">Sem fornecedor</string>
+
+    <string name="editor_delete_supplier_successful">Fornecedor excluído</string>
+
+    <string name="editor_delete_supplier_failed">Erro ao excluir o fornecedor</string>
+
+    <string name="editor_delete_product_successful">Produto excluído</string>
+
+    <string name="editor_delete_product_failed">Erro ao excluir o produto</string>
+
+    <string name="editor_insert_product_successful">Produto cadastrado</string>
+
+    <string name="editor_insert_product_failed">Erro ao cadastrar o produto</string>
+
+    <string name="editor_insert_supplier_failed">Erro ao cadastrar o fornecedor</string>
+
+    <string name="editor_insert_supplier_successful">Fornecedor cadastrado</string>
+
+    <string name="unknown_supplier">Forncedor desconhecido</string>
+
+    <string name="empty_view_supplier_text">Não há forncedor cadastrado...</string>
+
+    <string name="empty_view_supplier_subtitle_text">Adicione um fornecedor no botão abaixo</string>
+
+    <string name="empty_view_title_text">Não há produto cadastrado...</string>
+
+    <string name="empty_view_subtitle_text">Adicione um produto no botão abaixo</string>
+
+    <string name="editor_activity_title_edit_supplier">Editar fornecedor</string>
+
+    <string name="editor_activity_title_edit_product">Editar produto</string>
+
+    <string name="activity_title_supplier_product">Fornecedores</string>
+
+    <string name="activity_title_details_product">Detalhes do produto</string>
+
+    <string name="activity_title_amount_product">Gerenciar quantidade</string>
+
+    <string name="activity_title_amount_add_product">Adicionar</string>
+
+    <string name="activity_title_amount_remove_product">Retirar</string>
+
+    <string name="btn_text_edit_product">Editar produto</string>
+
+    <string name="btn_text_buy_from_supplier">Comprar do fornecedor</string>
+
+    <string name="btn_text_remove_product">Remover produto do estoque</string>
+
+    <string name="activity_amount_zeroed_product">Insira uma quantidade maior do que zero</string>
+
+    <string name="editor_update_product_successful">Produto editado</string>
+
+    <string name="editor_update_product_failed">Erro ao editar o produto</string>
+
+    <string name="editor_update_supplier_successful">Fornecedor editado</string>
+
+    <string name="editor_update_supplier_failed">Erro ao editar o fornecedor</string>
+
+    <string name="unsaved_changes_dialog_msg">Descartar suas alterações e sair da edição?</string>
+
+    <string name="discard">Descartar</string>
+
+    <string name="keep_editing">Continar editando</string>
+
+    <string name="delete_supplier_dialog_msg">Excluir este fornecedor?</string>
+
+    <string name="delete_dialog_msg">Excluir este produto?</string>
+
+    <string name="delete">Excluir</string>
+
+    <string name="cancel">Cancelar</string>
+
+    <string name="text_amount">Quantidade: %1$s</string>
+
+    <string name="text_value">Valor: %1$s</string>
+
+    <string name="email_title_new_order">Novo pedido para o produto: %1$s</string>
+
+    <string name="email_body_new_order">Olá, solicitamos a quantidade de ... para o produto %1$s</string>
+
+    <string name="email_title_send">Enviar email</string>
+
+    <string name="sell_update_amount_failed">Erro ao realizar a venda</string>
+
+    <string name="sell_update_amount_successful">Venda realizada com sucesso</string>
+
+    <string name="sell_update_amount_zeroed">O estoque para este produto está zerado!</string>
+
+    <string name="stock_update_amount_failed">Erro ao atualizar o estoque</string>
+
+    <string name="stock_update_amount_successful">Estoque atualizado com sucesso</string>
+
+    <string name="stock_smaller_amount_provided">O valor fornecido não pode ser maior do que o estoque atual</string>
+
+    <string name="editor_warning_imagem_null">Preencha o campo imagem</string>
+
+    <string name="editor_warning_name_null">Preencha o campo nome</string>
+
+    <string name="editor_warning_amount_null">Preencha o campo quantidade</string>
+
+    <string name="editor_warning_value_null">Preencha o campo valor</string>
+
+</resources>

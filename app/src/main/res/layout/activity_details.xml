@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/product_img"
+                android:layout_width="@dimen/product_image_width"
+                android:layout_height="@dimen/product_image_height"
+                android:layout_marginRight="@dimen/product_image_margin_right"
+                android:src="@drawable/ic_launcher"
+                app:civ_border_width="0dp"
+                app:civ_border_color="#FF000000"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/product_desc_margin_left"
+                >
+
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/ProductNameStyle"/>
+
+                <TextView
+                    android:id="@+id/product_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/product_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/product_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_title_amount_product"
+            android:layout_marginTop="30dp"
+            style="@style/ProductNameStyle"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            >
+
+            <EditText
+                android:id="@+id/details_product_text_amount"
+                android:inputType="numberSigned"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="@string/product_label_amount"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/details_product_btn_amount_add"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_title_amount_add_product"
+                android:textSize="10sp"
+                android:drawableLeft="@drawable/ic_product_add"/>
+
+            <Button
+                android:id="@+id/details_product_btn_amount_remove"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_title_amount_remove_product"
+                android:textSize="10sp"
+                android:drawableLeft="@drawable/ic_product_remove"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_edit_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/btn_text_edit_product"
+            android:drawableLeft="@drawable/ic_action_edit"
+            android:layout_marginTop="30dp"
+            style="@style/BtnBuySupplierStyle"/>
+
+        <Button
+            android:id="@+id/btn_buy_from_supplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/btn_text_buy_from_supplier"
+            android:drawableLeft="@drawable/ic_add_shopping_cart"
+            android:layout_marginTop="10dp"
+            style="@style/BtnBuySupplierStyle"/>
+
+        <Button
+            android:id="@+id/btn_remove_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/btn_text_remove_product"
+            android:drawableLeft="@drawable/ic_action_cancel"
+            android:layout_marginTop="10dp"
+            style="@style/BtnRemoveProdStyle"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.android.inventory"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.example.android.inventory.CatalogActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.inventory.EditorActivity"
+            android:label="@string/editor_activity_title_new_product"
+            android:theme="@style/EditorTheme"
+            android:parentActivityName="com.example.android.inventory.CatalogActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.inventory.CatalogActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.inventory.DetailsActivity"
+            android:label="@string/activity_title_details_product"
+            android:theme="@style/EditorTheme"
+            android:parentActivityName="com.example.android.inventory.CatalogActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.inventory.CatalogActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.inventory.SupplierActivity"
+            android:label="@string/activity_title_supplier_product"
+            android:theme="@style/EditorTheme"
+            android:parentActivityName="com.example.android.inventory.CatalogActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.inventory.CatalogActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.inventory.EditorSupplierActivity"
+            android:label="@string/editor_activity_title_new_supplier"
+            android:theme="@style/EditorTheme"
+            android:parentActivityName="com.example.android.inventory.SupplierActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.inventory.SupplierActivity" />
+        </activity>
+        <provider
+            android:authorities="com.example.android.inventory"
+            android:name="com.example.android.inventory.data.InventoryProvider"
+            android:exported="false" />
+    </application>
+
+</manifest>

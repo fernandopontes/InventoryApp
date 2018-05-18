@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/product_label_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/product_view_image"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_launcher"
+                android:layout_below="@+id/edtPrice"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="18dp"
+                />
+
+            <Button
+                android:id="@+id/product_btn_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:gravity="center"
+                android:text="@string/product_btn_add_img" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/product_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/product_label_name"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/product_text_amount"
+            android:inputType="numberSigned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/product_label_amount"
+            android:layout_marginTop="16dp" />
+
+
+        <EditText
+            android:id="@+id/product_text_value"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/product_label_value"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/product_label_supplier" />
+
+        <Spinner
+            android:id="@+id/product_spinner_supplier"
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:spinnerMode="dropdown"/>
+
+        <EditText
+            android:id="@+id/product_text_desc"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/product_label_desc"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
