@@ -64,7 +64,7 @@ public class EditorActivity extends AppCompatActivity implements
     private Spinner mSupplierSpinner;
 
     private int mSupplier;
-    
+
     /** Boolean flag that keeps track of whether the product has been edited (true) or not (false) */
     private boolean mProductHasChanged = false;
 
@@ -357,6 +357,8 @@ public class EditorActivity extends AppCompatActivity implements
                     // Otherwise, the insertion was successful and we can display a toast.
                     Toast.makeText(this, getString(R.string.editor_insert_product_successful),
                             Toast.LENGTH_SHORT).show();
+                    // Exit activity
+                    finish();
                 }
             }
         } else {
@@ -376,6 +378,8 @@ public class EditorActivity extends AppCompatActivity implements
                     // Otherwise, the update was successful and we can display a toast.
                     Toast.makeText(this, getString(R.string.editor_update_product_successful),
                             Toast.LENGTH_SHORT).show();
+                    // Exit activity
+                    finish();
                 }
             }
         }
@@ -412,8 +416,6 @@ public class EditorActivity extends AppCompatActivity implements
             case R.id.action_save:
                 // Save product to database
                 saveProduct();
-                // Exit activity
-                finish();
                 return true;
             // Respond to a click on the "Delete" menu option
             case R.id.action_delete:

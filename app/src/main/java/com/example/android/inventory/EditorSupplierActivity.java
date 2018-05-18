@@ -107,15 +107,22 @@ public class EditorSupplierActivity extends AppCompatActivity implements
         String nameString = mSupplierTextName.getText().toString().trim();
         String emailString = mSupplierTextEmail.getText().toString().trim();
         String phoneString = mSupplierTextPhone.getText().toString().trim();
+        Boolean invalid = false;
 
-        // Check if this is supposed to be a new product
+        // Check if this is supposed to be a new supplier
         // and check if all the fields in the editor are blank
-        if (mCurrentProductUri == null &&
-                TextUtils.isEmpty(nameString) &&
-                TextUtils.isEmpty(emailString) ) {
-            // Since no fields were modified, we can return early without creating a new product.
-            // No need to create ContentValues and no need to do any ContentProvider operations.
-            return;
+        // Since no fields were modified, we can return early without creating a new product.
+        // No need to create ContentValues and no need to do any ContentProvider operations.
+        if(TextUtils.isEmpty(nameString)) {
+            Toast.makeText(this, getString(R.string.editor_warning_supplier_name_null),
+                    Toast.LENGTH_SHORT).show();
+            invalid = true;
+        }
+
+        if(TextUtils.isEmpty(emailString)) {
+            Toast.makeText(this, getString(R.string.editor_warning_supplier_email_null),
+                    Toast.LENGTH_SHORT).show();
+            invalid = true;
         }
 
         // Create a ContentValues object where column names are the keys,
@@ -140,6 +147,8 @@ public class EditorSupplierActivity extends AppCompatActivity implements
                 // Otherwise, the insertion was successful and we can display a toast.
                 Toast.makeText(this, getString(R.string.editor_insert_supplier_successful),
                         Toast.LENGTH_SHORT).show();
+                // Exit activity
+                finish();
             }
         } else {
             // Otherwise this is an EXISTING product, so update the product with content URI: mCurrentProductUri
@@ -157,6 +166,8 @@ public class EditorSupplierActivity extends AppCompatActivity implements
                 // Otherwise, the update was successful and we can display a toast.
                 Toast.makeText(this, getString(R.string.editor_update_supplier_successful),
                         Toast.LENGTH_SHORT).show();
+                // Exit activity
+                finish();
             }
         }
     }
@@ -192,8 +203,6 @@ public class EditorSupplierActivity extends AppCompatActivity implements
             case R.id.action_save:
                 // Save product to database
                 saveSupplier();
-                // Exit activity
-                finish();
                 return true;
             // Respond to a click on the "Delete" menu option
             case R.id.action_delete:
